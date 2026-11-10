@@ -1,0 +1,786 @@
+Campus Cafe Inventory - Automated Test Session
+Date: 2026-11-10 15:07:42 +05:30
+
+Compile: javac Main.java Product.java
+Compilation succeeded.
+
+==============================================================================
+TEST: Empty inventory operations
+INPUT:
+  2
+  3
+  4
+  0
+CONSOLE OUTPUT:
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: No products to display!!
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: No products in the inventory
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: No products in the inventory
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Goodbye!
+Products created in total: 0
+RESULT: PASS
+
+==============================================================================
+TEST: Add product and calculate totals/average
+INPUT:
+  1
+  Coffee
+  12.5
+  2
+  3
+  4
+  2
+  0
+CONSOLE OUTPUT:
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Total Stock Value : 25.0
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Average Cost : 12.5
+Average Cost (rounded down) : 12
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: 1. Coffee | Rs 12.5 | qty 2
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Goodbye!
+Products created in total: 1
+RESULT: PASS
+
+==============================================================================
+TEST: Reject invalid price and quantity
+INPUT:
+  1
+  Free item
+  0
+  5
+  1
+  Negative stock
+  4
+  -1
+  1
+  Tea
+  3.0
+  0
+  2
+  0
+CONSOLE OUTPUT:
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: Price must be greater than 0 and quantity cannot be negative.
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: Price must be greater than 0 and quantity cannot be negative.
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: 1. Tea | Rs 3.0 | qty 0
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Goodbye!
+Products created in total: 1
+RESULT: PASS
+
+==============================================================================
+TEST: Restock last product number
+INPUT:
+  1
+  Tea
+  3
+  2
+  5
+  1
+  4
+  2
+  2
+  0
+CONSOLE OUTPUT:
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Product number: Quantity to add: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: 1. Tea | Rs 3.0 | qty 6
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: 1. Tea | Rs 3.0 | qty 6
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Goodbye!
+Products created in total: 1
+RESULT: PASS
+
+==============================================================================
+TEST: Reject invalid restock selection and quantity
+INPUT:
+  1
+  Tea
+  3
+  2
+  5
+  2
+  1
+  5
+  1
+  0
+  2
+  0
+CONSOLE OUTPUT:
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Product number: Quantity to add: Product number should be between 1 and 1
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Product number: Quantity to add: Quantity should be greater than 0
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: 1. Tea | Rs 3.0 | qty 2
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Goodbye!
+Products created in total: 1
+RESULT: PASS
+
+==============================================================================
+TEST: Duplicate last product
+INPUT:
+  1
+  Samosa
+  15
+  3
+  6
+  1
+  2
+  0
+CONSOLE OUTPUT:
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Product number: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: 1. Samosa | Rs 15.0 | qty 3
+2. Samosa (copy) | Rs 15.0 | qty 3
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Goodbye!
+Products created in total: 2
+RESULT: PASS
+
+==============================================================================
+TEST: Reject invalid duplicate selection
+INPUT:
+  1
+  Samosa
+  15
+  3
+  6
+  0
+  0
+CONSOLE OUTPUT:
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Product number: Product number should be between 1 and 1
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Goodbye!
+Products created in total: 1
+RESULT: PASS
+
+==============================================================================
+TEST: Reject additions when inventory is full
+INPUT:
+  1
+  Item1
+  1
+  1
+  1
+  Item2
+  1
+  1
+  1
+  Item3
+  1
+  1
+  1
+  Item4
+  1
+  1
+  1
+  Item5
+  1
+  1
+  1
+  Item6
+  1
+  1
+  1
+  Item7
+  1
+  1
+  1
+  Item8
+  1
+  1
+  1
+  Item9
+  1
+  1
+  1
+  Item10
+  1
+  1
+  1
+  Overflow
+  1
+  1
+  2
+  0
+CONSOLE OUTPUT:
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: Product list is full.
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: 1. Item1 | Rs 1.0 | qty 1
+2. Item2 | Rs 1.0 | qty 1
+3. Item3 | Rs 1.0 | qty 1
+4. Item4 | Rs 1.0 | qty 1
+5. Item5 | Rs 1.0 | qty 1
+6. Item6 | Rs 1.0 | qty 1
+7. Item7 | Rs 1.0 | qty 1
+8. Item8 | Rs 1.0 | qty 1
+9. Item9 | Rs 1.0 | qty 1
+10. Item10 | Rs 1.0 | qty 1
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Goodbye!
+Products created in total: 10
+RESULT: PASS
+
+==============================================================================
+TEST: Reject duplication when inventory is full
+INPUT:
+  1
+  Item1
+  1
+  1
+  1
+  Item2
+  1
+  1
+  1
+  Item3
+  1
+  1
+  1
+  Item4
+  1
+  1
+  1
+  Item5
+  1
+  1
+  1
+  Item6
+  1
+  1
+  1
+  Item7
+  1
+  1
+  1
+  Item8
+  1
+  1
+  1
+  Item9
+  1
+  1
+  1
+  Item10
+  1
+  1
+  6
+  1
+  2
+  0
+CONSOLE OUTPUT:
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Name: Price: Quantity: 
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Product number: Product list is full.
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: 1. Item1 | Rs 1.0 | qty 1
+2. Item2 | Rs 1.0 | qty 1
+3. Item3 | Rs 1.0 | qty 1
+4. Item4 | Rs 1.0 | qty 1
+5. Item5 | Rs 1.0 | qty 1
+6. Item6 | Rs 1.0 | qty 1
+7. Item7 | Rs 1.0 | qty 1
+8. Item8 | Rs 1.0 | qty 1
+9. Item9 | Rs 1.0 | qty 1
+10. Item10 | Rs 1.0 | qty 1
+
+--- Campus Cafe Inventory ---
+1. Add product
+2. Display all products
+3. Total stock value
+4. Average price
+5. Restock a product
+6. Duplicate a product
+0. Exit
+Choose: Goodbye!
+Products created in total: 10
+RESULT: PASS
+
+==============================================================================
+SUMMARY: All 9 test scenarios passed.
